@@ -5,15 +5,13 @@
 }
 
 :root {
-    /* --ff-primary: "Source Sans Pro", "sans-serif";
-    --ff-secondary: "Souce Code Pro", "mono-space"; */
-    --ff-primary: "Lora", "sans-serif";
-    --ff-secondary: "Roboto Slab", "mono-space";
+    --ff-primary: "Source Sans Pro", "sans-serif";
+    --ff-secondary: "Souce Code Pro", "mono-space";
 
-    /* --fw-reg: 300;
-    --fw-bold: 900; */
-    --fw-reg: 400;
-    --fw-bold: 700;
+    --fw-reg: 300;
+    --fw-bold: 900;
+    /* --fw-reg: 400;
+    --fw-bold: 700; */
 
     --clr-light: #f0ead2;
     --clr-dark: #504037;
@@ -60,6 +58,8 @@ img {
 
 }
 
+
+
 /*Typeography*/
 h1,
 h2,
@@ -104,8 +104,9 @@ h3 {
 .section__subtitle--intro,
 .section__subtitle--about {
     background: var(--clr-accent);
+    padding: .25em 1em;
     font-family: var(--ff-secondary);
-
+    margin-bottom: .5em;
 }
 
 /*Header*/
@@ -128,7 +129,7 @@ header {
     color: var(--clr-light);
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 0%;
     right: 0;
     z-index: 100;
     transform: translateX(100%);
@@ -233,6 +234,7 @@ header {
 
 .intro {
     position: relative;
+    padding-bottom: 6em;
 }
 
 .intro__img {
@@ -278,11 +280,12 @@ header {
 .my-services {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    background-image: url(../img/services-bg.jpg);
+    background-image: url(../img/servicesbg.jpg);
     background-size: cover;
     /* background-blend-mode: multiply; */
     text-align: center;
-    
+    padding-top: 2em;
+    padding-bottom: 1.2em;
 }
 
 .section-title--services {
@@ -291,7 +294,7 @@ header {
 }
 
 .section-title--services::after {
-    content: "";
+    content: '';
     display: block;
     width: 25%;
     height: 1px;
@@ -303,6 +306,15 @@ header {
 .service {
     max-width: 500px;
     margin: 0, auto;
+    background: rgba(80, 64, 55, .8);
+    padding: 1.2em 1.2em .5em 1.2em;
+    margin: 1.5em 0;
+    border-radius: 25px;
+}
+
+.service:hover {
+
+    background: rgba(80, 64, 55, 1);
 
 }
 
@@ -325,9 +337,31 @@ header {
     }
 }
 
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 1.8em;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* About Me */
+
 .about-me {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 3em auto;
 
 }
 
@@ -372,7 +406,7 @@ header {
     background-color: var(--clr-dark);
     color: var(--clr-light);
     text-align: center;
-
+    padding: 3em;
 }
 
 .section__subtitle--projects {
@@ -461,6 +495,49 @@ header {
 
 /* Individual portfolio item styles */
 
+/* .individual-intro {
+    position: relative;
+    padding-bottom: 6em;
+}
+
+.individual-intro__img {
+    box-shadow: var(--bs);
+}
+
+.individual-section__subtitle--intro {
+    display: inline-block;
+}
+
+@media (min-width: 600px) {
+    .individual-intro {
+        display: grid;
+        grid-template-areas: 
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+    }
+
+    .individual-intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .individual-section__subtitle--intro {
+        align-self: start;
+        grid-column: -1/1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100%+1.5em);
+    }
+} */
+
 .portfolio-item-individual {
     padding: 0 2em 2em;
     max-width: 1000px;
@@ -471,4 +548,15 @@ header {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 0%;
+    z-index: 100;
+    /* border-width: 0%; */
 }
