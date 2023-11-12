@@ -239,6 +239,10 @@ header {
 
 .intro__img {
     box-shadow: var(--bs);
+    height: 240px;
+    width: 200px;
+    object-fit: cover;
+    object-position: center bottom;
 }
 
 .section__subtitle--intro {
@@ -304,23 +308,45 @@ header {
 }
 
 .service {
-    max-width: 500px;
+    max-width: 800px;
+
     margin: 0, auto;
     background: rgba(80, 64, 55, .8);
     padding: 1.2em 1.2em .5em 1.2em;
-    margin: 1.5em 0;
+    /* margin: 1.5em 0; */
     border-radius: 25px;
-}
-
-.service:hover {
-
-    background: rgba(80, 64, 55, 1);
-
+    /* display: flex;
+    justify-content: flex-start; */
 }
 
 .services {
     margin-bottom: 4em;
 }
+
+.service:hover {
+
+    background: rgba(80, 64, 55, 1);
+    
+}
+
+/* #hide {
+  display: inline-block;
+  max-width: 0%;
+  vertical-align: bottom;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width 1s ease-in-out;
+}
+
+h1 {
+  cursor: default;
+  font-size: 5vw;
+}
+
+h1:hover #hide {
+  max-width: 100%;
+} */
+
 
 @media (min-width: 800px) {
     .services {
